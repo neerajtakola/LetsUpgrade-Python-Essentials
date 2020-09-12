@@ -1,0 +1,45 @@
+Q1 :
+sublist = [1,1,5]
+list1 = []
+choice = "y"
+print("Enter the list : ")
+while choice.lower()=="y":
+  num = input()
+  list1.append(int(num))
+  choice = input("Want to add more?(y/n)")
+list1Start = 0
+sublistStart = 0
+match = True
+while list1Start < len(list1):
+  if sublist[sublistStart] == list1[list1Start]:
+    sublistStart +=1
+    #print("if")
+  elif sublist[sublistStart] != list1[list1Start] and list1Start == len(list1)-1:
+    match = False
+    #print("elif")
+  list1Start +=1
+
+if match == True:
+  print("it's a match")
+else:
+  print("it's gone")
+ 
+ 
+Q2: 
+  def isPrime(num):
+  flag = False
+  for x in range(2,int(num/2)+1):
+    if  num % x == 0:
+      flag = True
+  return not flag
+filter1 = filter(isPrime,range(1,2500))
+for f in filter1:
+  print(f)
+  
+  
+  
+Q3 :
+list1 = ["hey this is sai", "i'm in mumbai"]
+newList = list(map(lambda s : s.capitalize(),list1))
+print(newList)
+  
