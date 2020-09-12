@@ -40,6 +40,6 @@ for f in filter1:
   
 Q3 :
 list1 = ["hey this is sai", "i'm in mumbai"]
-newList = list(map(lambda s : s.capitalize(),list1))
+newList = list(map(lambda s : s.title(),list1))
 print(newList)
   
