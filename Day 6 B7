@@ -1,0 +1,45 @@
+Q1
+class Account:
+  def __init__(self,ownerName,balance):
+    self.ownerName = ownerName
+    self.balance = balance
+  def deposit(self,amount):
+    self.balance = self.balance + amount
+  def getbalance(self):
+    return self.balance
+  def withdraw(self,amount):
+    if self.balance < amount:
+      return "Low balance "
+    else:
+      self.balance -= amount
+      return "Amount Withdrwan"
+
+account1= Account("Neeraj",5000)
+print("Balance : ",account1.getbalance())
+account1.deposit(10000)
+print("Balance : ",account1.getbalance())
+print("Message : ",account1.withdraw(25000))
+print("Message : ",account1.withdraw(10000))
+print("Balance : ",account1.getbalance())
+
+
+Q2
+import math
+
+class Cone:
+  def __init__(self,radius,height):
+    self.radius=radius
+    self.height=height
+  def getVolume(self):
+    return math.pi*(self.radius**2)*(self.height/3)
+  def getSurfaceArea(self):
+    return math.pi*self.radius*(self.radius+math.sqrt((self.height**2) + (self.radius**2)))
+
+
+cone1= Cone(15,20)
+print("Volume : ",cone1.getVolume())
+print("Surfae Area : ",cone1.getSurfaceArea())
+
+cone2= Cone(25,30)
+print("Volume : ",cone2.getVolume())
+print("Surfae Area : ",cone2.getSurfaceArea())
