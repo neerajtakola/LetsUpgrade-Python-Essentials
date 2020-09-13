@@ -1,0 +1,23 @@
+Q1 :
+def decor(func):
+  def inner(no):
+    return fibs(no)
+  return inner
+
+
+def fibs(num):
+  if num < 2:
+    return num
+  else:
+    return fibs(num-1)+fibs(num-2)
+
+print(fibs(10))
+
+
+Q2 :
+try:
+  file1 = open("samplefile.txt",'r')
+  print(file1.read())
+  file1.write("lets write something")
+except Exception as e:
+  print(e)
